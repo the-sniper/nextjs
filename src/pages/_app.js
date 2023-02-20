@@ -83,6 +83,7 @@ import StripeCardState from "@/context/stripe/card/cardState";
 import Routes from "src/routes";
 import AuthState from "@/context/auth/authState";
 import { keepTheme } from "src/Utils/theme";
+import InitialLoad from "@/common/initialLoad";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -146,6 +147,7 @@ function App(props) {
                         >
                           <StylesProvider injectFirst>
                             <div className="App">
+                              {/* <InitialLoad /> */}
                               <Alerts />
                               <Component {...pageProps} />
                               <Router>
